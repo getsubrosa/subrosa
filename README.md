@@ -1,4 +1,4 @@
-# Sub-Rosa
+# Sub Rosa
 
 ## Services
 
