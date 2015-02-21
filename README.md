@@ -20,6 +20,9 @@
     - [owncloud](https://owncloud.org)
   * **blog**
     - [Ghost](https://tryghost.org)
+  * **git**
+    - [Gitolite](http://gitolite.com/gitolite/index.html)
+    - [Gitlab](https://about.gitlab.com/)
   * **photos**
   * **todos**
   * **evernote clone**
