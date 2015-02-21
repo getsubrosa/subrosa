@@ -13,11 +13,11 @@
     tags: apt
 
   - name: apt | os_debian7.yml >> update apt package cache
-    apt: update_cache=yes
+    apt: update_cache=yes cache_valid_time={{ apt.cache_valid_time }}
     environment: env.proxies
     tags: apt
 
-  #- name: apt | os_debian7.yml >> upgrade installed packages
-    #apt: upgrade=yes
-    #environment: env.proxies
-    #tags: apt
+  - name: apt | os_debian7.yml >> upgrade installed packages
+    apt: upgrade=yes
+    environment: env.proxies
+    tags: apt

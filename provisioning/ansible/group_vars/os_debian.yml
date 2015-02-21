@@ -15,3 +15,6 @@ common:
       - news
       - proxy
       - uucp
+
+apt:
+  cache_valid_time: 3600
