@@ -7,7 +7,7 @@ Vagrant.configure(2) do |config|
 
   config.ssh.insert_key = true
 
-  config.vm.box = "puphpet/debian75-x64"
+  config.vm.box = "puphpet/debian75-x64" # This is actually a 7.8 image
   config.vm.box_check_update = false
   config.vm.define "subrosa_vm"
 
