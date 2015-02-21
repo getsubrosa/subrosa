@@ -1,5 +1,13 @@
 # Sub Rosa
 
+## Usage
+
+If your Vagrant machine isn't already up, `vagrant up` will start and provision
+the vagrant environment.
+
+If your Vagrant machine is already running, `vagrant provision` will provision
+the running vagrant environment.
+
 ## Services
 
 ### Core
