@@ -1,3 +1,5 @@
+# common
+
 common:
   users:
     to_remove:
@@ -15,6 +17,16 @@ common:
       - news
       - proxy
       - uucp
-
 apt:
   cache_valid_time: 3600
+
+# sshd
+
+sshd:
+  package: openssh-server
+  version: 1:6.0p1-4+deb7u2
+  config:
+    port: 22
+    enable_pam_auth: 'no'
+    enable_password_auth: 'yes'
+    enable_pub_key_auth: 'no'
