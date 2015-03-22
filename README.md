@@ -2,7 +2,6 @@
 
 [![Build Status](https://travis-ci.org/getsubrosa/subrosa.svg)](https://travis-ci.org/getsubrosa/subrosa)
 
-
 ## Usage
 
 If your Vagrant machine isn't already up, `vagrant up` will start and provision
