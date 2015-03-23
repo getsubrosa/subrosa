@@ -1,7 +1,6 @@
 ---
+  - include: common_os_debian7.yml
+    when: ansible_distribution == "Debian" and ansible_distribution_version|int == 7
 
-- include: common_os_debian7.yml
-  when: ansible_distribution == "Debian" and ansible_distribution_version|int == 7
-
-- include: users_groups_os_debian7.yml
-  when: ansible_distribution == "Debian" and ansible_distribution_version|int == 7
+  - include: users_groups_os_debian7.yml
+    when: ansible_distribution == "Debian" and ansible_distribution_version|int == 7
