@@ -1,0 +1,14 @@
+---
+  - name: common | common_os_debian7.yml | ensure apt sources.list present
+    debug: "msg='TODO: need task to specify a known sources.list'"
+    tags: apt
+
+  - name: common | common_os_debian7.yml | update apt package cache
+    apt: update_cache=yes cache_valid_time={{ common.apt.cache_valid_time }}
+    environment: env.proxies
+    tags: apt
+
+  - name: common | common_os_debian7.yml | upgrade installed packages
+    apt: upgrade=yes
+    environment: env.proxies
+    tags: apt

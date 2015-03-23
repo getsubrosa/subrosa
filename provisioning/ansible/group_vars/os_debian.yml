@@ -1,6 +1,8 @@
 # common
 
 common:
+  subrosa:
+    username: subrosa
   users:
     to_remove:
       - games
@@ -17,8 +19,8 @@ common:
       - news
       - proxy
       - uucp
-apt:
-  cache_valid_time: 3600
+  apt:
+    cache_valid_time: 3600
 
 # sshd
 

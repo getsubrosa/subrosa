@@ -1,0 +1,14 @@
+---
+  - name: common | users_groups_os_debian7.yml | remove unnecessary users
+    user: name={{ item }} state=absent
+    with_items: common.users.to_remove
+    tags: users
+
+  - name: common | users_groups_os_debian7.yml | remove unnecessary groups
+    group: name={{ item }} state=absent
+    with_items: common.groups.to_remove
+    tags: users
+
+  - name: common | users_groups_os_debian7.yml | create subrosa user
+    user: name={{ common.subrosa.username }} createhome=yes state=present
+    tags: users
