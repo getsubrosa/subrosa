@@ -32,3 +32,9 @@ sshd:
     enable_pam_auth: 'no'
     enable_password_auth: 'yes'
     enable_pub_key_auth: 'no'
+
+# nginx
+
+nginx:
+  package: nginx
+  version: 1.2.1-2.2+wheezy3

@@ -11,4 +11,5 @@
   gather_facts: True
   roles:
    - common
+   - nginx
    - sshd
