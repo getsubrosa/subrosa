@@ -1,7 +1,7 @@
 ---
   - name: sshd | main.yml >> sshd present
     apt: pkg={{ sshd.package }}={{ sshd.version }} state=present
-    environment: env.proxies
+    environment: env
     tags: sshd
 
   - name: sshd | main.yml >> sshd conf present
