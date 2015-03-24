@@ -17,6 +17,7 @@ Vagrant.configure(2) do |config|
   config.vm.provision :ansible do |ansible|
     ansible.playbook = "provisioning/ansible/site.yml"
     ansible.extra_vars = { ansible_ssh_user: "vagrant" }
+    # ansible.verbose = "vvvv"
   end
 
   config.vm.provider "virtualbox" do |vm|
