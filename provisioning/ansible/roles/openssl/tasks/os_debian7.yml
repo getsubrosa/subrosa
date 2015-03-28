@@ -1,0 +1,5 @@
+---
+  - name: openssl | main.yml | openssl present
+    apt: pkg={{ openssl.package }}={{ openssl.version }} state=present
+    environment: env
+    tags: openssl

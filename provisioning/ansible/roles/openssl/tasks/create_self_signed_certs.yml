@@ -1,0 +1,8 @@
+---
+  - name: openssl | create_self_signed_certs.yml | create self-signed cert dir
+    file: path={{ openssl.self_signed_certs.dir_path }} state=directory
+    tags: openssl
+
+  - name: openssl | create_self_signed_certs.yml | create self-signed key dir
+    file: path={{ openssl.self_signed_certs.key_path }} state=directory
+    tags: openssl

@@ -38,3 +38,12 @@ sshd:
 nginx:
   package: nginx
   version: 1.2.1-2.2+wheezy3
+
+# openssl
+
+openssl:
+  package: openssl
+  version: 1.0.1e-2+deb7u16
+  self_signed_certs:
+    dir_path: /etc/ssl/selfsigned
+    key_path: /etc/ssl/selfsigned/key

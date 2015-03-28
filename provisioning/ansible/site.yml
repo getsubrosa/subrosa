@@ -11,5 +11,6 @@
   gather_facts: True
   roles:
    - common
+   - openssl
    - nginx
    - sshd
