@@ -3,7 +3,7 @@
 # About
 
 Sub Rosa is a set of opinionated Ansible playbooks inspired by
-[Sovereign](https://github.com/al3x/sovereign)
+[Sovereign](https://github.com/al3x/sovereign) and [CloudBox](https://github.com/pjan/the-ansibles/blob/master/docs/cloudbox.md)
 that can be used to run your own **secure**, personal cloud.  While Sovereign
 gives you a variety of options and configurations, we're selecting a specific
 suite of services that focuses on security and privacy while minimizing
