@@ -36,8 +36,7 @@ sshd:
 # nginx
 
 nginx:
-  package: nginx
-  version: 1.2.1-2.2+wheezy3
+  version: 1.6.3-1~wheezy
 
 # openssl
 

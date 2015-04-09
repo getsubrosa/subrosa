@@ -7,8 +7,3 @@
     apt: update_cache=yes cache_valid_time={{ common.apt.cache_valid_time }}
     environment: env
     tags: apt
-
-  - name: common | common_os_debian7.yml | upgrade installed packages
-    apt: upgrade=yes
-    environment: env
-    tags: apt
