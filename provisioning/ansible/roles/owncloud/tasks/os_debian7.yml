@@ -1,0 +1,3 @@
+---
+  - name: owncloud | os_debian7.yml | stub
+    debug: "msg='TODO: Owncloud Stub'"

@@ -12,5 +12,7 @@
   roles:
    - common
    - openssl
-   - nginx
    - sshd
+   - mail
+   - nginx
+   - owncloud
