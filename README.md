@@ -1,6 +1,6 @@
 [![Build Status](https://travis-ci.org/getsubrosa/subrosa.svg)](https://travis-ci.org/getsubrosa/subrosa)
 
-# About
+# Introduction
 
 Sub Rosa is a set of opinionated Ansible playbooks inspired by
 [Sovereign](https://github.com/al3x/sovereign) and [CloudBox](https://github.com/pjan/the-ansibles/blob/master/docs/cloudbox.md)

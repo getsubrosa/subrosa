@@ -17,7 +17,7 @@ Vagrant.configure(2) do |config|
   config.vm.network "forwarded_port", guest: 443, host: 50443, auto_correct: true
 
   config.vm.provision :ansible do |ansible|
-    ansible.playbook = "provisioning/ansible/site.yml"
+    ansible.playbook = "site.yml"
     ansible.extra_vars = { ansible_ssh_user: "vagrant" }
     # ansible.verbose = "vvvv"
   end

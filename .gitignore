@@ -1,1 +1,5 @@
+# vagrant
 .vagrant
+
+# pyenv
+.python-version
