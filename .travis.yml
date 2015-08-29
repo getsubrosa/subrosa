@@ -8,4 +8,4 @@
     - pip install ansible
   script:
     - echo localhost > inventory
-    - ansible-playbook -i inventory --syntax-check provisioning/ansible/site.yml
+    - ansible-playbook -i inventory --syntax-check site.yml
