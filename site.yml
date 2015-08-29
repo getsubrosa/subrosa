@@ -4,9 +4,11 @@
   sudo: True
   gather_facts: True
   tasks:
-     - group_by: key=os_{{ ansible_distribution }}
+    - name: main | site.yml | group hosts by distribution / version
+      group_by: key=os_{{ ansible_distribution }}{{ ansible_distribution_version|int }}
+    - debug: msg=os_{{ ansible_distribution }}{{ ansible_distribution_version|int }}
 
-- hosts: os_Debian
+- hosts: os_Debian7
   sudo: True
   gather_facts: True
   roles:

@@ -36,13 +36,13 @@ sshd:
 # nginx
 
 nginx:
-  version: 1.6.3-1~wheezy
+  version: 1.8.0-1~wheezy
 
 # openssl
 
 openssl:
   package: openssl
-  version: 1.0.1e-2+deb7u16
+  version: 1.0.1e-2+deb7u17
   self_signed_certs:
     dir_path: /etc/ssl/selfsigned
     key_path: /etc/ssl/selfsigned/key
