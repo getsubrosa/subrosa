@@ -1,4 +1,4 @@
 ---
-  - name: openssl | main.yml | openssl present
+  - name: openssl | os_debian7.yml | openssl present
     apt: pkg={{ openssl.package }}={{ openssl.version }} state=present
     environment: env
