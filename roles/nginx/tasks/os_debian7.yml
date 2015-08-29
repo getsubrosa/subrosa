@@ -1,34 +1,34 @@
 ---
-  - name: nginx | nginx_os_debian7.yml | add nginx apt signing key
+  - name: nginx | os_debian7.yml | add nginx apt signing key
     sudo: yes
     apt_key: url='http://nginx.org/keys/nginx_signing.key'
 
-  - name: nginx | nginx_os_debian7.yml | add official nginx apt repository
+  - name: nginx | os_debian7.yml | add official nginx apt repository
     sudo: yes
     apt_repository: repo="deb http://nginx.org/packages/{{ansible_distribution|lower}}/ {{ansible_distribution_release}} nginx"
 
-  - name: nginx | nginx_os_debian7.yml | install nginx
+  - name: nginx | os_debian7.yml | install nginx
     sudo: yes
     apt: name=nginx={{ nginx.version }} state=present update_cache=yes cache_valid_time=3600
 
-  - name: nginx | nginx_os_debian7.yml | remove default configuration
+  - name: nginx | os_debian7.yml | remove default configuration
     file: path=/etc/nginx/conf.d/default.conf state=absent
     notify:
       - reload nginx
 
-  - name: nginx | nginx_os_debian7.yml | ensure nginx configuration
+  - name: nginx | os_debian7.yml | ensure nginx configuration
     template: src=nginx.conf.j2 dest=/etc/nginx/nginx.conf group=root owner=root
     notify:
       - restart nginx
 
-  - name: nginx | nginx_os_debian7.yml | ensure nginx ssl directory exists
+  - name: nginx | os_debian7.yml | ensure nginx ssl directory exists
     file: path=/etc/nginx/ssl state=directory group=root owner=root
 
-  - name: nginx | nginx_os_debian7.yml | generate ssl forward secrecy
+  - name: nginx | os_debian7.yml | generate ssl forward secrecy
     command: openssl dhparam -out /etc/nginx/ssl/dhparam.pem 2048 creates=/etc/nginx/ssl/dhparam.pem
 
-  - name: nginx | nginx_os_debian7.yml | ensure ssl forward secrecy key
+  - name: nginx | os_debian7.yml | ensure ssl forward secrecy key
     file: path=/etc/nginx/ssl/dhparam.pem owner=root group=root mode=0600
 
-  - name: nginx | nginx_os_debian7.yml | ensure nginx service is running
+  - name: nginx | os_debian7.yml | ensure nginx service is running
     service: name=nginx state=started
