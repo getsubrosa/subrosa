@@ -1,3 +1,12 @@
 ---
-  - name: mail | os_debian7.yml | stub
-    debug: "msg='TODO: Stub'"
+  - name: encfs | os_debian7.yml | encfs dependencies present
+    apt: pkg={{ item.package }}={{ item.version }} state=present
+    with_items: encfs.dependencies
+    environment: env
+
+  - name: encfs | os_debian7.yml | encfs present
+    apt: pkg={{ encfs.package }}={{ encfs.version }} state=present
+    environment: env
+
+  - name: encfs | os_debian7.yml | create encrypted directory @ /encrypted
+    file: state=directory path=/encrypted

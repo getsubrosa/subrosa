@@ -22,6 +22,22 @@ common:
   apt:
     cache_valid_time: 3600
 
+# encfs
+encfs:
+  dependencies:
+    - { package: fuse, version: 2.9.0-2+deb7u2 }
+  package: encfs
+  version: 1.7.4-2.4+b1
+
+# openssl
+
+openssl:
+  package: openssl
+  version: 1.0.1e-2+deb7u17
+  self_signed_certs:
+    dir_path: /etc/ssl/selfsigned
+    key_path: /etc/ssl/selfsigned/key
+
 # sshd
 
 sshd:
@@ -37,12 +53,3 @@ sshd:
 
 nginx:
   version: 1.8.0-1~wheezy
-
-# openssl
-
-openssl:
-  package: openssl
-  version: 1.0.1e-2+deb7u17
-  self_signed_certs:
-    dir_path: /etc/ssl/selfsigned
-    key_path: /etc/ssl/selfsigned/key
